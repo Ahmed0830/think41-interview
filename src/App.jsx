@@ -8,7 +8,7 @@ function App() {
 
   useEffect(() => {
     async function fetchData() {
-      const { data, error } = await supabase.from("orders").select("");
+      const { data, error } = await supabase.from("orders").select("*");
       if (error) setError(error);
       else setData(data);
     }
